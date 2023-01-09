@@ -1,0 +1,187 @@
+html body nav {
+  position: -webkit-sticky;
+  position: sticky;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: blue;
+  border-bottom: 1px solid #000;
+  z-index: 10;
+}
+html body nav ul {
+  list-style: none;
+}
+html body nav ul li:first-child {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+html body nav ul li {
+  text-align: right;
+  padding: 30px;
+}
+html body nav ul li a {
+  text-decoration: none;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  html body nav ul li {
+    text-align: center;
+    padding: 10px;
+    padding: 5px;
+    overflow: hidden;
+  }
+  html body nav ul li a {
+    border-left: 0px solid white;
+  }
+}
+html body header:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url(https://uomdai19172.files.wordpress.com/2019/11/sea6.jpg?w=1024);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+html body header {
+  height: 100%;
+  position: relative;
+}
+html body header section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: monospace;
+  font-style: oblique;
+}
+html body header section a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  html body header h1 {
+    text-align: center;
+    color: white;
+  }
+}
+html body main #projects {
+  padding: 3px;
+}
+html body main #projects h2 {
+  justify-content: center;
+  font-family: monospace;
+  font-style: italic;
+  padding: 10px;
+}
+html body main #projects .projects-row.row {
+  gap: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-content: center;
+}
+html body main #projects .projects-row.row .project-tile {
+  min-height: 200px;
+  max-height: 400px;
+  padding: 0px;
+}
+html body main #projects .projects-row.row .project-tile a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+html body main #projects .projects-row.row .project-tile a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1);
+  transform-origin: 100% 0;
+}
+html body main #projects .projects-row.row .project-tile a img:hover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.5) translateX(30%);
+}
+
+html body footer:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url(https://i.pinimg.com/originals/77/5a/b8/775ab8f7dcb36967199e17b6a02b5a9b.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+html body footer {
+  position: relative;
+}
+html body footer section {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: bold;
+  align-items: center;
+  position: relative;
+}
+html body footer section h2 {
+  font-weight: bold;
+  color: blue;
+  font-size: 2rem;
+}
+html body footer section div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+html body footer section img {
+  width: 5rem;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background-color: rgb(167, 199, 231);
+  color: white;
+}
+html body .row {
+  margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  html body {
+    background-color: black;
+    color: white;
+  }
+}/*# sourceMappingURL=styles.css.map */

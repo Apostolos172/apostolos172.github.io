@@ -1,0 +1,56 @@
+html {
+  body {
+    footer:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      //   background-position: 50% 0;
+
+      background-image: url(https://i.pinimg.com/originals/77/5a/b8/775ab8f7dcb36967199e17b6a02b5a9b.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    footer {
+      position: relative;
+
+      section {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: bold;
+
+        // vertically
+        align-items: center;
+
+        position: relative;
+
+        h2 {
+          font-weight: bold;
+          color: blue;
+          font-size: 2rem;
+        }
+
+        div {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-direction: row-reverse;
+          align-items: center;
+        }
+
+        img {
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
