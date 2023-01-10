@@ -43,32 +43,6 @@
                 alt="converter"
             /></a>
           </div>
-          <!--
-          <div class="project-tile col-sm-6">
-            <a
-              href="https://github.com/Apostolos172/business-system"
-              class="project-link"
-              ><img
-                src="https://github.com/Apostolos172/business-system/raw/b17275c03a03a92792e99e05fbeda2ad39ca8d83/My_System/screenshots/main.png?raw=true"
-                alt="business-system"
-            /></a>
-          </div>
-          <div class="project-tile col-sm-6">
-            <a
-              href="https://github.com/Apostolos172/business-system"
-              class="project-link"
-              ><img
-                src="https://github.com/Apostolos172/business-system/raw/b17275c03a03a92792e99e05fbeda2ad39ca8d83/My_System/screenshots/main.png?raw=true"
-                alt="business-system"
-            /></a>
-          </div> -->
-
-          <!-- <div class="project-tile col-sm-5"></div>
-          <div class="project-tile col-sm-5"></div>
-          <div class="project-tile col-sm-4"></div>
-          <div class="project-tile col-sm-4"></div>
-          <div class="project-tile col-sm-4"></div>
-          <div class="project-tile col-sm-4"></div> -->
         </div>
       </section>
     </main>
@@ -100,29 +74,8 @@
       </section>
     </footer>
   </body>
-  <script type="module">
-    // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 
-    // // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-
-    // // Add Firebase products that you want to use
-    // import { getAuth } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
-    // import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-    // // TODO: Replace the following with your app's Firebase project configuration
-    // const firebaseConfig = {
-    //   // ...
-    // };
-
-    // // Initialize Firebase
-    // const app = initializeApp(firebaseConfig);
-    // console.log("app ", app);
-  </script>
-
-  <!-- <script type="module" src="index.js"></script> -->
   <script>
-    //import Project from "./Project.js";
-
     class Project {
       constructor(name, link, image) {
         this.name = name;
@@ -130,8 +83,6 @@
         this.image = image;
       }
     }
-
-    // console.log("Starting");
 
     const addToAllLinksBlankTargetAttribute = () => {
       let links = document.querySelectorAll("a.project-link");
@@ -144,89 +95,119 @@
 
     const addProjects = (container) => {
       // console.log(container);
-      fetch(
-        "https://portfolio-d9a8f-default-rtdb.europe-west1.firebasedatabase.app/projects.json"
-      )
-        .then((response) => {
-          // console.log(response);
-          return response.json();
-        })
-        .then((data) => {
-          // console.log(data);
 
-          let concatenatedData = Object.keys(data);
-          let values = Object.values(data);
-          // console.log(concatenatedData);
-          // console.log(values);
+      let concatenatedData = [
+        {
+          name: "25-5-Clock",
+          url: "https://github.com/Apostolos172/25-5-Clock",
+          image:
+            "https://apostolos172.github.io/25-5-Clock/static/media/clock.d8e4da5426f77f218ca6.jpg",
+        },
+        {
+          name: "Drum-Machine",
+          url: "https://github.com/Apostolos172/Drum-Machine",
+          image:
+            "https://github.com/Apostolos172/Drum-Machine/raw/master/screenshots/drum%20machine.png?raw=true",
+        },
+        {
+          name: "JavaScript-Calculator",
+          url: "https://github.com/Apostolos172/JavaScript-Calculator",
+          image:
+            "https://github.com/Apostolos172/JavaScript-Calculator/raw/master/screenshots/calculator.png?raw=true",
+        },
+        {
+          name: "Markdown-Previewer",
+          url: "https://github.com/Apostolos172/Markdown-Previewer",
+          image:
+            "https://github.com/Apostolos172/Markdown-Previewer/raw/master/screenshots/markdown%20previewer.png?raw=true",
+        },
+        {
+          name: "Random-Quote-Machine",
+          url: "https://apostolos172.github.io/Random-Quote-Machine/",
+          image:
+            "https://i0.wp.com/www.invajy.com/wp-content/uploads/2019/12/Short-Quotes.jpeg?fit=760%2C570&ssl=1",
+        },
+        {
+          name: "Technical-Documentation-Page",
+          url: "https://github.com/Apostolos172/Technical-Documentation-Page",
+          image:
+            "https://img.freepik.com/free-vector/paper-with-coffee-phone-pen-cartoon-icon-illustration-business-object-icon-concept-isolated-flat-cartoon-style_138676-2131.jpg?w=2000",
+        },
+        {
+          name: "applied-informatics-info",
+          url: "https://github.com/Apostolos172/applied-informatics-info",
+          image:
+            "https://github.com/Apostolos172/applied-informatics-info/raw/master/screenshots/Screenshot%20%CE%9A%CE%B1%CE%B8%CE%B7%CE%B3%CE%B7%CF%84%CE%AD%CF%82.png?raw=true",
+        },
+        {
+          name: "business-system",
+          url: "https://github.com/Apostolos172/business-system",
+          image:
+            "https://github.com/Apostolos172/business-system/raw/b17275c03a03a92792e99e05fbeda2ad39ca8d83/My_System/screenshots/invoice.png?raw=true",
+        },
+        {
+          name: "communication-systems",
+          url: "https://github.com/Apostolos172/communication-systems",
+          image:
+            "https://github.com/Apostolos172/communication-systems/raw/master/screenshots/Screenshot_Virtual_ask_7.png?raw=true",
+        },
+        {
+          name: "diavgeia-retrieval",
+          url: "https://github.com/Apostolos172/diavgeia-retrieval",
+          image:
+            "https://github.com/Apostolos172/diavgeia-retrieval/raw/master/screenshots/example1.png?raw=true",
+        },
+        {
+          name: "interesting-sites",
+          url: "https://github.com/Apostolos172/interesting-sites",
+          image:
+            "https://github.com/Apostolos172/interesting-sites/raw/master/screenshots/Screenshot-Interesting-sites.png?raw=true",
+        },
+        {
+          name: "metrics-for-communication-systems",
+          url: "https://github.com/Apostolos172/metrics-for-communication-systems",
+          image:
+            "https://github.com/Apostolos172/metrics-for-communication-systems/raw/master/screenshots/example.png?raw=true",
+        },
+        {
+          name: "product-landing-page",
+          url: "https://github.com/Apostolos172/product-landing-page",
+          image:
+            "https://www.knipex.com/sites/default/files/styles/knipex_product_detail/public/IM0004702.jpg?itok=DINY9GDP",
+        },
+        {
+          name: "techpoli",
+          url: "https://github.com/Apostolos172/techpoli",
+          image:
+            "https://github.com/Apostolos172/techpoli/raw/52d110bfab8fd0943bc27a41a345e06f49cdb793/screenshots/home%20top.png",
+        },
+        {
+          name: "tribute-page",
+          url: "https://github.com/Apostolos172/tribute-page",
+          image:
+            "https://upload.wikimedia.org/wikipedia/commons/3/38/Einstein_Albert_Elsa_LOC_32096u.jpg",
+        },
+      ];
 
-          concatenatedData = concatenatedData.map((project, index) => {
-            let tempProject = new Project(
-              project,
-              values[index].link,
-              values[index].image
-            );
-            return tempProject;
-          });
-          // console.log(concatenatedData);
+      concatenatedData.forEach((project, index) => {
+        const div = document.createElement("div");
+        div.classList.add("project-tile", "col-sm-5");
 
-          let divTest = document.getElementById("test");
+        const a = document.createElement("a");
+        a.classList.add("project-link");
+        a.href = project.url;
 
-          // divTest.innerHTML = JSON.stringify(concatenatedData);
-          // get data and give them as an array
+        const img = document.createElement("img");
+        img.src = project.image;
+        img.alt = project.name;
+        a.appendChild(img);
 
-          let stringifiedData = JSON.stringify(concatenatedData);
-          // console.log(stringifiedData);
-          // console.log(typeof stringifiedData);
-          concatenatedData = JSON.parse(stringifiedData);
+        div.appendChild(a);
 
-          // get data and give them as an array
-          //   concatenatedData = [
-          //     {
-          //       name: "JavaScript-Calculator",
-          //       url: "https://github.com/Apostolos172/JavaScript-Calculator",
-          //       image:
-          //         "https://github.com/Apostolos172/JavaScript-Calculator/raw/master/screenshots/calculator.png?raw=true",
-          //     },
-          //     {
-          //       name: "business-system",
-          //       url: "https://github.com/Apostolos172/business-system",
-          //       image:
-          //         "https://github.com/Apostolos172/business-system/raw/b17275c03a03a92792e99e05fbeda2ad39ca8d83/My_System/screenshots/invoice.png?raw=true",
-          //     },
-          //     {
-          //       name: "diavgeia-retrieval",
-          //       url: "https://github.com/Apostolos172/diavgeia-retrieval",
-          //       image:
-          //         "https://github.com/Apostolos172/diavgeia-retrieval/raw/master/screenshots/example1.png?raw=true",
-          //     },
-          //     {
-          //       name: "interesting-sites",
-          //       url: "https://github.com/Apostolos172/interesting-sites",
-          //       image:
-          //         "https://github.com/Apostolos172/interesting-sites/raw/master/screenshots/Screenshot-Interesting-sites.png?raw=true",
-          //     },
-          //   ];
+        container.appendChild(div);
 
-          concatenatedData.forEach((project, index) => {
-            const div = document.createElement("div");
-            div.classList.add("project-tile", "col-sm-5");
-
-            const a = document.createElement("a");
-            a.classList.add("project-link");
-            a.href = project.url;
-
-            const img = document.createElement("img");
-            img.src = project.image;
-            img.alt = project.name;
-            a.appendChild(img);
-
-            div.appendChild(a);
-
-            container.appendChild(div);
-
-            addToAllLinksBlankTargetAttribute();
-          });
-        });
+        addToAllLinksBlankTargetAttribute();
+      });
     };
 
     `
@@ -243,8 +224,6 @@
     // console.log(projectsContainer);
 
     addProjects(projectsContainer);
-
-    // addToAllLinksBlankTargetAttribute();
   </script>
   <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </html>
