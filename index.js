@@ -1,14 +1,4 @@
-//import Project from "./Project.js";
-
-class Project {
-  constructor(name, link, image) {
-    this.name = name;
-    this.url = link;
-    this.image = image;
-  }
-}
-
-// console.log("Starting");
+import Project from "./Project.js";
 
 const addToAllLinksBlankTargetAttribute = () => {
   let links = document.querySelectorAll("a.project-link");
@@ -56,34 +46,6 @@ const addProjects = (container) => {
       // console.log(typeof stringifiedData);
       concatenatedData = JSON.parse(stringifiedData);
 
-      // get data and give them as an array
-      //   concatenatedData = [
-      //     {
-      //       name: "JavaScript-Calculator",
-      //       url: "https://github.com/Apostolos172/JavaScript-Calculator",
-      //       image:
-      //         "https://github.com/Apostolos172/JavaScript-Calculator/raw/master/screenshots/calculator.png?raw=true",
-      //     },
-      //     {
-      //       name: "business-system",
-      //       url: "https://github.com/Apostolos172/business-system",
-      //       image:
-      //         "https://github.com/Apostolos172/business-system/raw/b17275c03a03a92792e99e05fbeda2ad39ca8d83/My_System/screenshots/invoice.png?raw=true",
-      //     },
-      //     {
-      //       name: "diavgeia-retrieval",
-      //       url: "https://github.com/Apostolos172/diavgeia-retrieval",
-      //       image:
-      //         "https://github.com/Apostolos172/diavgeia-retrieval/raw/master/screenshots/example1.png?raw=true",
-      //     },
-      //     {
-      //       name: "interesting-sites",
-      //       url: "https://github.com/Apostolos172/interesting-sites",
-      //       image:
-      //         "https://github.com/Apostolos172/interesting-sites/raw/master/screenshots/Screenshot-Interesting-sites.png?raw=true",
-      //     },
-      //   ];
-
       concatenatedData.forEach((project, index) => {
         const div = document.createElement("div");
         div.classList.add("project-tile", "col-sm-5");
@@ -120,5 +82,3 @@ let projectsContainer = document.querySelector(".projects-row");
 // console.log(projectsContainer);
 
 addProjects(projectsContainer);
-
-// addToAllLinksBlankTargetAttribute();
